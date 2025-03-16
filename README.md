@@ -1,2 +1,1 @@
-# JeevanSaiKanaparthi
-Jeevan Sai Kanaparthi Resume
+# Mehafooz-Portfolio
