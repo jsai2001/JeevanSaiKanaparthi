@@ -320,6 +320,120 @@ section {
   position: relative;
 }
 
+#experience,
+#certifications,
+#projects {
+  height: fit-content;
+}
+
+.career-container,
+.skills-container,
+.certification-container,
+.project-container {
+  flex-wrap: wrap;
+}
+
+.career-card {
+  flex: 1 1 35rem;
+  text-align: left;
+}
+
+.career-card .experience-sub-title,
+.career-meta {
+  text-align: left;
+}
+
+.career-card .experience-sub-title {
+  margin-bottom: 0.5rem;
+}
+
+.career-meta {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.career-highlights {
+  color: rgb(85, 85, 85);
+  line-height: 1.7;
+  padding-left: 1.25rem;
+}
+
+.skills-card {
+  flex: 1 1 20rem;
+  text-align: left;
+}
+
+.skills-card .experience-sub-title {
+  text-align: center;
+}
+
+.skill-list {
+  color: rgb(85, 85, 85);
+  line-height: 1.8;
+  list-style: none;
+}
+
+.certification-carousel {
+  width: 100%;
+}
+
+.certification-slide {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.certification-slide[hidden] {
+  display: none;
+}
+
+.certification-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  justify-content: flex-start;
+  text-align: center;
+  width: auto;
+}
+
+.certification-card .experience-sub-title {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.credential-link {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  text-decoration: none;
+  width: auto;
+}
+
+.certification-controls {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.5rem auto 0;
+}
+
+.carousel-button {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  width: 3rem;
+}
+
+.carousel-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.carousel-status {
+  min-width: 15rem;
+  text-align: center;
+}
+
 .experience-sub-title {
   color: rgb(85, 85, 85);
   font-weight: 600;
@@ -359,6 +473,42 @@ article .icon {
   position: relative;
 }
 
+.project-card {
+  align-items: stretch;
+  flex: 1 1 23rem;
+  flex-direction: column;
+  text-align: left;
+  width: auto;
+}
+
+.project-container {
+  display: block;
+}
+
+.project-group + .project-group {
+  margin-top: 2.5rem;
+}
+
+.project-group-title {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.project-group-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-card .project-title {
+  margin: 0 0 1rem;
+  text-align: left;
+}
+
+.project-card p {
+  line-height: 1.7;
+}
+
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
@@ -378,6 +528,30 @@ article .icon {
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
+}
+
+@media screen and (max-width: 900px) {
+  .certification-slide {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-group-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .certification-slide {
+    grid-template-columns: 1fr;
+  }
+
+  .project-group-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-status {
+    min-width: 0;
+  }
 }
 
 /* CONTACT */
